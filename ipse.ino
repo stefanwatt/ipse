@@ -1,20 +1,17 @@
-#include "Led.h"
-#include "Ultrasound.h"
+#include "lib/config.h"
+#include "lib/led/led.h"
+#include "lib/pinout.h"
+#include "lib/ultrasound/ultrasound.h"
 
-int trigPin = 2;
-int echoPin = 3;
-int ledPin = 3;
+Ultrasound ultrasound(ULTRASOUND_TRIG_PIN, ULTRASOUND_ECHO_PIN, MAX_DISTANCE,
+                      MIN_DISTANCE);
 
-int radarPin = 4;
-int radarVal = 0;
+Led led(LED_PIN, FADE_DURATION, MAX_BRIGHTNESS, DEFAULT_LED_PERCENTAGE);
 
-Ultrasound ultrasound(trigPin, echoPin);
-Led led(ledPin);
-unsigned long lastExecution = 0;
 void setup() { Serial.begin(9600); }
 
 void loop() {
-  unsigned long time_now = millis();
-  const int percentage = ultrasound.getDistancePercentage();
+  const unsigned long now = millis();
+  const int percentage = ultrasound.GetDistancePercentage();
   led.UpdateBrightness(percentage);
 }
