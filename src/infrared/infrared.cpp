@@ -1,4 +1,4 @@
-#include "Infrared.h"
+#include "infrared.h"
 
 Infrared::Infrared(int _pin){
   pin = _pin;

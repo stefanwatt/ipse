@@ -1,4 +1,4 @@
-#include "Ultrasound.h"
+#include "ultrasound.h"
 long duration;
 double distance;
 bool isDimming = false;

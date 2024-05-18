@@ -1,10 +1,27 @@
-#include "Led.h"
+#include "src/config.h"
+#include "led.h"
 
-Led::Led(int _pin,int _fadeDuration, int _maxBrightness, double _percentage = 50) {
+Led::Led(int _pin,int _fadeDuration, int _maxBrightness, double _defaultPercentage = 50) {
   pin = _pin;
   fadeDuration = _fadeDuration;
   maxBrightness = _maxBrightness;
-  percentage = _percentage;
+  percentage = _defaultPercentage;
+  defaultPercentage = _defaultPercentage;
+}
+
+void Led::On(){
+  updateLedSmoothly(maxBrightness);
+}
+
+void Led::Off(){
+  updateLedSmoothly(0);
+}
+
+void Led::Toggle(){
+  if(brightness > 0){
+    updateLedSmoothly(0);
+  }
+  updateLedSmoothly(defaultPercentage);
 }
 
 void Led::UpdateBrightness(double updatedPercentage){
