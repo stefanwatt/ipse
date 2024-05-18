@@ -5,12 +5,18 @@
 
 class Ultrasound {
 public:
-    Ultrasound(int trigPin, int echoPin);
-    long getDistance();
+    Ultrasound(int trigPin, int echoPin, double maxDistance, double minDistance);
+    int GetDistancePercentage();
 
 private:
-    int _trigPin;
-    int _echoPin;
+    long computeDistance();
+    long normalizeDistance();
+    bool isInDimmingRange();
+    int trigPin;
+    int echoPin;
+    double maxDistance = 15.0;
+    double minDistance = 4.0;
+    double distance;
 };
 
 #endif
