@@ -1,0 +1,25 @@
+FQBN: arduino:avr:nano
+Using board 'nano' from platform in folder: /home/stefan/.arduino15/packages/arduino/hardware/avr/1.8.6
+Using core 'arduino' from platform in folder: /home/stefan/.arduino15/packages/arduino/hardware/avr/1.8.6
+
+Detecting libraries used...
+/home/stefan/.arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/bin/avr-g++ -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -flto -w -x c++ -E -CC -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10607 -DARDUINO_AVR_NANO -DARDUINO_ARCH_AVR -save-temps -I/home/stefan/.arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino -I/home/stefan/.arduino15/packages/arduino/hardware/avr/1.8.6/variants/eightanaloginputs /tmp/build/sketch/ipse.ino.cpp -o /dev/null
+Generating function prototypes...
+/home/stefan/.arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/bin/avr-g++ -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -flto -w -x c++ -E -CC -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10607 -DARDUINO_AVR_NANO -DARDUINO_ARCH_AVR -save-temps -I/home/stefan/.arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino -I/home/stefan/.arduino15/packages/arduino/hardware/avr/1.8.6/variants/eightanaloginputs /tmp/build/sketch/ipse.ino.cpp -o /run/user/1000/1545693576/sketch_merged.cpp
+/home/stefan/.arduino15/packages/builtin/tools/ctags/5.8-arduino11/ctags -u --language-force=c++ -f - --c++-kinds=svpf --fields=KSTtzns --line-directives /run/user/1000/1545693576/sketch_merged.cpp
+Compiling sketch...
+/home/stefan/.arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/bin/avr-g++ -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=10607 -DARDUINO_AVR_NANO -DARDUINO_ARCH_AVR -save-temps -I/home/stefan/.arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino -I/home/stefan/.arduino15/packages/arduino/hardware/avr/1.8.6/variants/eightanaloginputs /tmp/build/sketch/ipse.ino.cpp -o /tmp/build/sketch/ipse.ino.cpp.o
+Compiling libraries...
+Compiling core...
+Using precompiled core: /tmp/cache/core/arduino_avr_nano_1b86e71aae809a2aee63e871703e9fd4/core.a
+Linking everything together...
+/home/stefan/.arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/bin/avr-gcc -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega328p -o /tmp/build/ipse.ino.elf /tmp/build/sketch/ipse.ino.cpp.o /tmp/build/../cache/core/arduino_avr_nano_1b86e71aae809a2aee63e871703e9fd4/core.a -L/tmp/build -lm
+/home/stefan/.arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0 /tmp/build/ipse.ino.elf /tmp/build/ipse.ino.eep
+/home/stefan/.arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/bin/avr-objcopy -O ihex -R .eeprom /tmp/build/ipse.ino.elf /tmp/build/ipse.ino.hex
+
+/home/stefan/.arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/bin/avr-size -A /tmp/build/ipse.ino.elf
+Sketch uses 6560 bytes (21%) of program storage space. Maximum is 30720 bytes.
+Global variables use 350 bytes (17%) of dynamic memory, leaving 1698 bytes for local variables. Maximum is 2048 bytes.
+
+[92mUsed platform[0m [92mVersion[0m [90mPath[0m                                                       
+[93marduino:avr[0m   1.8.6   [90m/home/stefan/.arduino15/packages/arduino/hardware/avr/1.8.6[0m
