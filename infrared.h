@@ -5,8 +5,8 @@
 
 class Infrared {
 public:
-    Infrared(int pin);
-    bool IsTriggered();
+    Infrared(const int pin);
+    bool IsActive();
 
 private:
     int pin;

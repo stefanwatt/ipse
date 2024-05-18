@@ -1,2 +1,5 @@
 .vscode
 arduino_project
+.cache
+.git
+output
