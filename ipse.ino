@@ -47,8 +47,8 @@ void loop() {
     dimmer->Toggle(now);
   }
 
+  Serial.println("distance: " + String(distance));
   if (dimmer->Dimming) {
-    Serial.println("distance: " + String(distance));
     const int percentage = ultrasound->GetDistancePercentage();
     dimmer->Dim(percentage);
   }

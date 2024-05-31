@@ -13,6 +13,9 @@ Ultrasound::Ultrasound(const int _trigPin, const int _echoPin, const double _max
 
 int Ultrasound::GetDistancePercentage() {
     const double distance = GetDistance();  
+    if (distance > MAX_DISTANCE){
+        return 100;
+    }
     double percentage = (distance - minDistance) / (maxDistance - minDistance) * 100;
     return percentage;
 }
